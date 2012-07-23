@@ -30,8 +30,8 @@ typedef char* message_ptr;
 #define MESSAGE_RX_BUFFER_SIZE      5
 #define MESSAGE_TX_BUFFER_SIZE      5
 
-#define MSG_NUM                     6
-typedef enum {MSG_POSITION, MSG_IMU, MSG_SONAR, MSG_POWER, MSG_JOYSTICK, MSG_CONFIG} message_packet_t;
+#define MSG_NUM                     7
+typedef enum {MSG_POSITION, MSG_IMU, MSG_SONAR, MSG_POWER, MSG_JOYSTICK, MSG_DEBUG, MSG_CONFIG} message_packet_t;
 typedef enum {MSG_INT8, MSG_UINT8, MSG_INT16, MSG_UINT16, MSG_INT32, MSG_UINT32, MSG_FLOAT, MSG_CHAR, MSG_STRING} message_data_t;
 typedef char message_setting_t; //Stored as a char as it allows more settings to be stored with one character (compared to 10 for decimal ASCII)
 
@@ -49,6 +49,8 @@ enum {SONAR_GET};
 enum {POWER_GET, POWER_GET_ALL, POWER_RESET_ENERGY};
 //Settings for MSG_JOYSTICK
 enum {JOYSTICK_GET};
+//Settings for MSG_DEBUG
+enum {DEBUG_GET, DEBUG_SET};
 //Settings for MSG_CONFIG
 enum {CONFIG_GET, CONFIG_SET};
 
